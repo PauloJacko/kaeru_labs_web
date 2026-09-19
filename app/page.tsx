@@ -42,54 +42,57 @@ export default function Home() {
         </div>
       </header>
 
-      {/* 2. HERO SECTION */}
-      <section className="relative pt-44 pb-20 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between min-h-[580px] overflow-hidden">
-        
-        {/* Imagen de la Mascota de Fondo (Achicada, bajada y clara) */}
-        <div className="absolute top-0 right-0 w-full md:w-3/5 h-full pointer-events-none flex justify-end items-center z-0 pt-12 md:pt-16">
-          
-          {/* Gradiente Oscuro SOLO en el lado izquierdo donde chocan las letras */}
-          <div className="absolute left-0 top-0 bottom-0 w-1/2 md:w-2/5 bg-gradient-to-r from-kaeru-dark via-kaeru-dark/80 to-transparent z-10 pointer-events-none"></div>
+{/* 2. HERO SECTION */}
+<section className="relative pt-36 md:pt-44 pb-20 px-6 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between min-h-[580px] overflow-hidden">
+  
+  {/* Imagen de la Mascota de Fondo (Ocupa la pantalla superpuesta) */}
+  <div className="absolute top-0 right-0 w-full md:w-3/5 h-full pointer-events-none flex justify-end items-center z-0 pt-12 md:pt-16">
+    
+    {/* Capa de Oscurecimiento General para Móvil (Ocurre por detrás del texto) */}
+    <div className="absolute inset-0 bg-kaeru-dark/65 md:bg-transparent z-10 pointer-events-none"></div>
 
-          <Image
-            src="/mascota-programando.png"
-            alt="Mascota de Kaeru Labs - Rana informática"
-            width={750}
-            height={750}
-            priority
-            className="object-contain w-auto h-full max-h-[460px] md:max-h-[500px] drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)]"
-          />
-        </div>
+    {/* Gradiente Oscuro en el lado izquierdo (En PC suaviza la transición hacia el texto) */}
+    <div className="absolute left-0 top-0 bottom-0 w-full md:w-2/5 bg-gradient-to-r from-kaeru-dark via-kaeru-dark/80 to-transparent z-10 pointer-events-none"></div>
 
-        {/* Textos y Botones (Con z-20 para estar por encima del degradado) */}
-        <div className="flex-1 max-w-xl space-y-6 z-20 relative">
-          
-          {/* ÚNICO H1 DE LA PÁGINA */}
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight drop-shadow-md">
-            Desarrollo Web y <span className="text-kaeru-green">Sistemas Informáticos</span>
-          </h1>
+    <Image
+      src="/mascota-programando.png"
+      alt="Mascota de Kaeru Labs - Rana informática"
+      width={750}
+      height={750}
+      priority
+      className="object-contain w-full md:w-auto h-full max-h-[480px] md:max-h-[500px] opacity-80 md:opacity-100 drop-shadow-[0_10px_30px_rgba(0,0,0,0.6)]"
+    />
+  </div>
 
-          <p className="text-gray-300 text-lg leading-relaxed drop-shadow-md">
-            Construimos tu sitio web y sistema con código de alto rendimiento. Infraestructura ordenada, hosting gratuito incluido y pasarelas de pago.
-          </p>
+  {/* Textos y Botones (Con z-20 para estar POR ENCIMA de la imagen y la capa oscura) */}
+  <div className="flex-1 max-w-xl space-y-6 z-20 relative">
+    
+    {/* ÚNICO H1 DE LA PÁGINA */}
+    <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+      Desarrollo Web y <span className="text-kaeru-green">Sistemas Informáticos</span>
+    </h1>
 
-          <div className="flex flex-wrap gap-4 pt-4">
-            <a
-              href="#precios"
-              className="bg-kaeru-green text-black font-bold px-7 py-3.5 rounded-xl hover:opacity-90 transition shadow-[0_0_20px_rgba(56,239,125,0.4)]"
-            >
-              Ver Planes y Precios
-            </a>
-            <a
-              href="#sistemas"
-              className="bg-kaeru-card/90 backdrop-blur-sm border border-white/20 text-white font-semibold px-7 py-3.5 rounded-xl hover:border-kaeru-green hover:text-kaeru-green transition"
-            >
-              Cotizar Sistema
-            </a>
-          </div>
-        </div>
+    <p className="text-gray-200 text-lg leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] font-medium">
+      Construimos tu sitio web y sistema con código de alto rendimiento. Infraestructura ordenada, hosting gratuito incluido y pasarelas de pago.
+    </p>
 
-      </section>
+    <div className="flex flex-wrap gap-4 pt-4">
+      <a
+        href="#precios"
+        className="bg-kaeru-green text-black font-bold px-7 py-3.5 rounded-xl hover:opacity-90 transition shadow-[0_0_20px_rgba(56,239,125,0.4)]"
+      >
+        Ver Planes y Precios
+      </a>
+      <a
+        href="#sistemas"
+        className="bg-kaeru-card/90 backdrop-blur-md border border-white/20 text-white font-semibold px-7 py-3.5 rounded-xl hover:border-kaeru-green hover:text-kaeru-green transition"
+      >
+        Cotizar Sistema
+      </a>
+    </div>
+  </div>
+
+</section>
 
     {/* 3. PLANES Y PRECIOS PÁGINAS WEB */}
     <section id="precios" className="py-24 px-6 bg-gradient-to-b from-kaeru-card via-[#0e1e17] to-kaeru-card border-y border-kaeru-green/20">
