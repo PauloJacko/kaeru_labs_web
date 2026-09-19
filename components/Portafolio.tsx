@@ -20,11 +20,11 @@ export default function Portafolio() {
       video: "/videos/demo-optica.mp4",
     },
     {
-      id: "reposicion",
-      titulo: "Sistema de Reposición",
+      id: "ticket",
+      titulo: "Sistema de Tickets",
       tag: "Sistema Informático",
-      desc: "Control de stock e inventario con alertas automatizadas para reabastecimiento de productos.",
-      video: "/videos/demo-reposicion.mp4",
+      desc: "Control de tickets de soporte técnico con asignación de prioridades y seguimiento de incidencias.",
+      video: "/videos/demo-ticket.mp4",
     },
   ];
 
@@ -35,20 +35,20 @@ export default function Portafolio() {
           Nuestros <span className="text-kaeru-green">Proyectos Destacados</span>
         </h2>
         <p className="text-gray-400 max-w-xl mx-auto text-sm md:text-base">
-          Explora algunas de las páginas web y sistemas informáticos desarrollados por nuestro equipo.
+          Explora algunas de las páginas web y sistemas informáticos desarrollados por Kaeru Labs.
         </p>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         
-        {/* --- PÁGINAS WEB --- */}
+{/* --- PÁGINAS WEB --- */}
         <div className="bg-kaeru-card border border-white/10 rounded-2xl overflow-hidden hover:border-kaeru-green/50 transition duration-300 flex flex-col justify-between group">
           <div>
             <div className="relative aspect-video bg-black/60 overflow-hidden border-b border-white/5">
               <iframe
                 src="https://www.fantasmedia.cl"
                 title="Fantas Media"
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300 pointer-events-none"
+                className="w-[166%] h-[166%] origin-top-left scale-60 opacity-80 group-hover:opacity-100 transition duration-300 pointer-events-none"
                 loading="lazy"
               />
             </div>
@@ -76,12 +76,12 @@ export default function Portafolio() {
               <iframe
                 src="https://www.opticanexo.cl"
                 title="Óptica Nexo"
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300 pointer-events-none"
+                className="w-[166%] h-[166%] origin-top-left scale-60 opacity-80 group-hover:opacity-100 transition duration-300 pointer-events-none"
                 loading="lazy"
               />
             </div>
             <div className="p-6 space-y-2">
-              <span className="text-xs text-kaeru-green font-bold uppercase tracking-wider">E-commerce / Catálogo</span>
+              <span className="text-xs text-kaeru-green font-bold uppercase tracking-wider">Sitio Web Corporativo</span>
               <h3 className="text-xl font-bold text-white group-hover:text-kaeru-green transition">Óptica Nexo</h3>
               <p className="text-gray-400 text-sm">Página comercial para venta de lentes, catálogo óptico y reserva de atenciones.</p>
             </div>
@@ -104,14 +104,14 @@ export default function Portafolio() {
               <iframe
                 src="https://fallingframes.vercel.app"
                 title="Falling Frames"
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300 pointer-events-none"
+                className="w-[166%] h-[166%] origin-top-left scale-60 opacity-80 group-hover:opacity-100 transition duration-300 pointer-events-none"
                 loading="lazy"
               />
             </div>
             <div className="p-6 space-y-2">
-              <span className="text-xs text-kaeru-green font-bold uppercase tracking-wider">Web Express / Landing</span>
+              <span className="text-xs text-kaeru-green font-bold uppercase tracking-wider">Web express con e-commerce</span>
               <h3 className="text-xl font-bold text-white group-hover:text-kaeru-green transition">Falling Frames</h3>
-              <p className="text-gray-400 text-sm">Landing page para banda de metal progresivo experimental con reproductor multimedia.</p>
+              <p className="text-gray-400 text-sm">Landing page para banda de metal progresivo experimental con sistema de compras.</p>
             </div>
           </div>
           <div className="p-6 pt-0">
